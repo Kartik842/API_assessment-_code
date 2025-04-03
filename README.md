@@ -91,6 +91,20 @@ I've added HTML test reporting using pytest-html. Now, running the tests will ge
 
 I've added error handling using a safe_request function that catches and reports API request failures. This ensures failed requests don't break the test suite unexpectedly.
 
+Test Cases
+Here's a test case result table format you can use in your report:
+
+| Test Case                                | Expected Outcome                           | Actual Outcome  | Status  |
+|------------------------------------------|-------------------------------------------|----------------|---------|
+| **test_create_book**                     | Book is created (201)                     | 201            | ✅ Pass  |
+| **test_get_book**                         | Book is retrieved (200)                   | 200            | ✅ Pass  |
+| **test_update_book**                      | Book details updated (200)                | 200            | ✅ Pass  |
+| **test_delete_book**                      | Book is deleted (204)                     | 204            | ✅ Pass  |
+| **test_create_book_invalid_payload**      | Invalid payload error (400)               | 400            | ✅ Pass  |
+| **test_get_non_existent_book**            | Book not found (404)                      | 404            | ✅ Pass  |
+| **test_update_non_existent_book**         | Book not found (404)                      | 404            | ✅ Pass  |
+| **test_delete_non_existent_book**         | Book not found (404)                      | 404            | ✅ Pass  |
+
 
 
 
